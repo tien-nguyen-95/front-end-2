@@ -4,17 +4,16 @@ body{
     background-image: url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
     background-position: top right, bottom left;
     background-repeat: no-repeat;
-    padding: 15px;
     background-color: hsl(240, 78%, 98%);
-    font-family: 'Montserrat';
+    font-family: 'Montserrat',sans-serif;
     align-items: center;
     text-align: center;
     font-weight: 700;
 }
-
-
-
-
+.toggleBox{
+    width: 360px;
+    margin: auto;
+}
 input[type="checkbox"]{
     position: relative;
     width: 70px;
@@ -49,6 +48,11 @@ input:checked[type="checkbox"]::before{
 .price{
     font-size: 250%;
     
+}
+.dollar{
+    font-size: 25px;
+    margin-right: 10px;
+    vertical-align: 15%;
 }
 #boxgroup{
     width: 1080px;

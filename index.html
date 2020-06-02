@@ -21,7 +21,7 @@
 <div id="boxgroup">
   <div id="basic" class="box">
     <h3>Basic</h3>
-    <h3 class="price" id="basic-price">&dollar;199.99</h3>
+    <h3 class="price" id="basic-price"><span class="dollar">&dollar;</span>199.99</h3>
     <div class="item">
       500 GB Storage
     </div>
@@ -36,7 +36,7 @@
 
   <div id="professional" class="box">
     <h3>Professional</h3>
-    <h3 class="price"  id="pro-price">&dollar;249.99</h3>
+    <h3 class="price"  id="pro-price"><span class="dollar">&dollar;</span>249.99</h3>
     <div class="item">
       1 TB Storage
     </div>
@@ -51,7 +51,7 @@
 
   <div id="master" class="box">
     <h3>Master</h3>
-    <h3 class="price" id="master-price">&dollar;399.99</h3>
+    <h3 class="price" id="master-price"><span class="dollar">&dollar;</span>399.99</h3>
     <div class="item">
       2 TB Storage
     </div>
@@ -68,14 +68,14 @@
     function checkbox(){
       var checkBox = document.getElementById("checkbox");
       if (checkBox.checked){
-        document.getElementById("basic-price").innerHTML = "&dollar;19.99";
-        document.getElementById("pro-price").innerHTML = "&dollar;24.99";
-        document.getElementById("master-price").innerHTML = "&dollar;39.99";
+        document.getElementById("basic-price").innerHTML = "<span class='dollar'>&dollar;</span>19.99";
+        document.getElementById("pro-price").innerHTML = "<span class='dollar'>&dollar;</span>24.99";
+        document.getElementById("master-price").innerHTML = "<span class='dollar'>&dollar;</span>39.99";
       }
       else{
-        document.getElementById("basic-price").innerHTML = "&dollar;199.99";
-        document.getElementById("pro-price").innerHTML = "&dollar;249.99";
-        document.getElementById("master-price").innerHTML = "&dollar;399.99";
+        document.getElementById("basic-price").innerHTML = "<span class='dollar'>&dollar;</span>199.99";
+        document.getElementById("pro-price").innerHTML = "<span class='dollar'>&dollar;</span>249.99";
+        document.getElementById("master-price").innerHTML = "<span class='dollar'>&dollar;</span>399.99";
   
       }
     }
