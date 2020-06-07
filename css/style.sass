@@ -1,0 +1,141 @@
+// Layout
+
+$desktop: 1440px
+$mobile: 375px
+
+//Primary
+
+$linearStart: hsl(236, 72%, 79%)
+$linearEnd: hsl(237, 63%, 64%)
+//Neutral
+
+$sGrayish: hsl(240, 78%, 98%)
+$mGrayish: hsl(234, 14%, 74%)
+$grayish: hsl(233, 13%, 49%)
+$dark: hsl(232, 13%, 33%)
+
+//main
+
+body
+    margin: 0
+    padding: 0
+    height: 100vh
+    background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg')
+    background-position: top right, bottom left
+    background-repeat: no-repeat, no-repeat
+    background-color: $sGrayish
+    font-family: 'Montserrat', sans-serif
+    font-size: 15px
+    text-align: center
+    font-weight: 700
+    color: $dark
+
+.container
+    max-width: $desktop
+    margin: auto
+
+.switch
+    width: 360px
+    margin: 50px auto
+    h1, .switch-row
+        width: 300px
+        margin: auto
+.switch-row
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    align-items: center
+    span
+        color: $mGrayish
+
+
+input[type=checkbox]
+    position: relative
+    width: 60px
+    height: 30px
+    background-image: linear-gradient(to bottom right, $linearStart , $linearEnd)
+    border-radius: 20px
+    -webkit-appearance: none
+    outline: none
+    cursor: pointer
+  
+input[type=checkbox]::before
+    position: absolute
+    content: ""
+    top: 2px
+    left: 2px
+    height: 26px
+    width: 26px
+    border-radius: 50%
+    background-color: $sGrayish
+    transition: .5s
+
+input:checked[type=checkbox]::before
+    left: 34px
+
+.content
+    margin: 50px auto
+    display: flex
+    justify-content: center
+
+.box
+    width: 300px
+    background-color: white
+    margin: 30px 0
+    padding: 30px
+    float: left
+    border-radius: 20px
+
+.price
+    font-size: 300%
+
+.dollar
+    font-size: 25px
+    margin-right: 10px
+    vertical-align: 15%
+
+.item
+    width: 100%
+    border-top: 0.5px solid $mGrayish
+    border-bottom: 0.5px solid $mGrayish
+    padding-top: 20px
+    padding-bottom: 20px
+
+button
+    width: 100%
+    margin-top: 20px
+    padding: 10px
+    border-radius: 5px
+    font-weight: 700
+    border: none
+    background-image: linear-gradient(to bottom right, $linearStart , $linearEnd)
+    color: white
+button:hover
+    color: $linearEnd
+    background: white
+    border: .5px solid $dark
+
+#professional
+    margin: 0px 0
+    padding: 60px 30px
+    background-image: linear-gradient(to bottom right, $linearStart , $linearEnd)
+    color: $sGrayish
+    button
+        color: $linearEnd
+        background: white
+    button:hover
+        color: white
+        background-image: linear-gradient(to bottom right, $linearStart , $linearEnd)
+        border: .5px solid white
+
+@media only screen and (max-width: 768px)
+    .container
+        max-width: $mobile
+    .content
+        flex-direction: column
+        justify-content: center
+    .box
+        width: 280px
+        margin: 30px auto
+    #professional
+        margin: 0px auto
